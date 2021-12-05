@@ -26,6 +26,8 @@
   -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: showUp 0.3s ease-in 0.7s forwards;
 }
 .header__box__title {
   text-transform: uppercase;
@@ -49,6 +51,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  animation: showUp 0.5s ease-in;
 }
 /* footer */
 .footer {
@@ -57,6 +61,9 @@
   bottom: 0;
   left: 0;
   padding: 20px 0;
+
+  opacity: 0;
+  animation: showUp 0.3s ease-in 0.7s forwards;
 }
 .footer__author {
   text-align: center;
@@ -65,7 +72,6 @@
   text-transform: capitalize;
   color: #fbfbfb;
 }
-
 /* media */
 @media only screen and (max-width: 767px) {
   .hefo {
@@ -92,4 +98,13 @@
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ExtraBold.ttf");
   font-weight: 800;
+}
+/* animations */
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
